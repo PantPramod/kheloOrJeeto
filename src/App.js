@@ -1,13 +1,11 @@
 import React from 'react'
 import './App.css';
-import App2 from './Portal/App2';
+import Test from './forwardRef/Test';
 
 const App = () => {
-
-
     return (
         <div className='app'>
-            <App2 />
+            <Test />
         </div>
     )
 }
