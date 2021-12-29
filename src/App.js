@@ -1,11 +1,13 @@
 import React from 'react'
 import './App.css';
-import Test from './forwardRef/Test';
+import Resume from './Resume/Resume';
+
 
 const App = () => {
     return (
         <div className='app'>
-            <Test />
+            <Resume />
+
         </div>
     )
 }

@@ -1,0 +1,70 @@
+.heading{
+    padding-top: 10px;
+    background: rgba(239, 238, 248, 0.781);
+    border-bottom:4px solid rgb(212, 210, 221);
+    color:rgba(80, 71, 71, 0.911);
+
+}
+.heading h3{
+    text-align: center;
+    padding: 5px;
+    font-size: 25px;
+    letter-spacing: 1px;
+}
+.contact {
+   font-size: 15px;
+   color:blue;
+   padding:5px;
+}
+.contact p{
+    text-align: center;
+}
+.objective{
+    padding:10px 10px 20px 10px;
+    font-size: 17px;
+    color:rgba(80, 71, 71, 0.911);
+    text-align: justify;
+}
+.location{
+    font-size: 14px;
+    text-align: center;
+    font-weight: 700;
+}
+.summary{
+  padding: 10px;
+  
+}
+.summary p{
+   border:1px solid black;
+   background: rgba(26, 21, 21, 0.747);
+   color:white;
+   padding: 10px;
+   border-radius: 5px;
+   text-align: center;
+}
+
+.summary ul{
+    padding: 20px;
+    padding-left: 30px;
+    font-size: 15px;
+    background: rgba(239, 238, 248, 0.781);
+    border-radius: 5px;
+}
+.project-title{
+    text-align: center;
+    font-size: 15px;
+    padding: 7px;
+    text-transform: uppercase;
+    color:cornflowerblue;
+    border:2px solid rgb(35, 91, 194);
+    margin-top: 10px;
+    border-radius: 5px;
+    font-weight: 700;
+    word-spacing: 5px;
+
+}
+.description{
+    padding: 10px;
+    text-align: justify;
+    font-size: 16px;
+}
