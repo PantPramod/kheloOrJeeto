@@ -1,0 +1,17 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.start{
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    margin-top: 50vh;
+    height: 50px;
+    width: 200px;
+    text-transform: uppercase;
+    background: darkblue;
+    transform: translateY(-25px);
+}
