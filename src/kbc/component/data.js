@@ -2,7 +2,7 @@
 const data = [
     {
 
-        "que": "Which one of the following river flows between Vindhyan and Satpura ranges?",
+        "question": "Which one of the following river flows between Vindhyan and Satpura ranges?",
         "opt1": "Narmada",
         "opt2": "Mahanadi",
         "opt3": "Son",
@@ -11,7 +11,7 @@ const data = [
         "explanation": "Explanation about answer1"
     },
     {
-        "que": "Tsunamis are not caused by",
+        "question": "Tsunamis are not caused by",
         "opt1": "Hurricanes",
         "opt2": "Earthquakes",
         "opt3": "Undersea landslides",
@@ -22,7 +22,7 @@ const data = [
     {
 
 
-        "que": "The country that has the highest in Barley Production?",
+        "question": "The country that has the highest in Barley Production?",
         "opt1": "China",
         "opt2": "India",
         "opt3": "Russia",
@@ -31,7 +31,7 @@ const data = [
         "explanation": "Explanation about answer1"
     },
     {
-        "que": "Which one of the following rivers originates in Brahmagiri range of Western Ghats?",
+        "question": "Which one of the following rivers originates in Brahmagiri range of Western Ghats?",
         "opt1": "Pennar",
         "opt2": "Cauvery",
         "opt3": "Krishna",
@@ -40,7 +40,7 @@ const data = [
         "explanation": "Explanation about answer1"
     },
     {
-        "que": "River Luni originates near Pushkar and drains into which one of the following?",
+        "question": "River Luni originates near Pushkar and drains into which one of the following?",
         "opt1": "Rann of Kachchh",
         "opt2": "Arabian Sea",
         "opt3": "Gulf of Cambay",
@@ -50,7 +50,7 @@ const data = [
     },
     {
 
-        "que": "Patanjali is well known for the compilation of –",
+        "question": "Patanjali is well known for the compilation of –",
         "opt1": "Yoga Sutra",
         "opt2": "Panchatantra",
         "opt3": "Brahma Sutra",
@@ -60,7 +60,7 @@ const data = [
     },
     {
 
-        "que": "The metal whose salts are sensitive to light is?",
+        "question": "The metal whose salts are sensitive to light is?",
         "opt1": "Zinc",
         "opt2": "Silver",
         "opt3": "Copper",
@@ -70,7 +70,7 @@ const data = [
     },
     {
 
-        "que": "The Central Rice Research Station is situated in?",
+        "question": "The Central Rice Research Station is situated in?",
         "opt1": "Chennai",
         "opt2": "Cuttack",
         "opt3": "Bangalore",
@@ -80,7 +80,7 @@ const data = [
     },
     {
 
-        "que": " Who among the following wrote Sanskrit grammar?",
+        "question": " Who among the following wrote Sanskrit grammar?",
         "opt1": "Kalidasa",
         "opt2": "Charak",
         "opt3": "Panini",
@@ -89,7 +89,7 @@ const data = [
         "explanation": "Explanation about answer1"
     },
     {
-        "que": "Which among the following headstreams meets the Ganges in last?",
+        "question": "Which among the following headstreams meets the Ganges in last?",
         "opt1": "Alaknanda",
         "opt2": "Pindar",
         "opt3": "Mandakini",

@@ -14,4 +14,6 @@
     text-transform: uppercase;
     background: darkblue;
     transform: translateY(-25px);
+    border-radius: 5px;
+    color:white;
 }

@@ -6,8 +6,9 @@ import GlobalContext from './context/GlobalContext';
 import Content from './component/Content.js'
 import './MyApp.css';
 
-const MyApp = () => {
+const MyApp = ({ data }) => {
     const [showCover, setShowCover] = useState(true);
+
 
     useEffect(() => {
         const timer = setTimeout(() => { setShowCover(false) }, 5500)
@@ -15,11 +16,12 @@ const MyApp = () => {
             clearTimeout(timer);
         }
     }, [])
+
     return (<GlobalContext>
         <div style={{ background: "rgb(32, 30, 30)" }}>
             {showCover && <Cover />}
             <Header />
-            <Content />
+            <Content data={data} />
         </div>
     </GlobalContext>)
 }

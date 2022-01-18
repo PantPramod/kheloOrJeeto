@@ -7,7 +7,6 @@ const Cover = () => {
 
     useEffect(() => {
         const myaudio = document.getElementById('myaudio');
-        console.log(myaudio);
         myaudio.play();
     }, [])
     return ReactDOM.createPortal(
@@ -22,15 +21,11 @@ const Cover = () => {
                 <div className='box4'></div>
 
             </div>
-            <audio style={{ display: "none" }} controls id="myaudio" autoplay>
+            <audio style={{ display: "none" }} controls id="myaudio" >
                 <source src={KBC} type="audio/mpeg" />
                 Your browser does not support the audio element.
             </audio>
-            {/* <audio controls>
-  <source src="horse.ogg" type="audio/ogg">
-  <source src="horse.mp3" type="audio/mpeg">
-Your browser does not support the audio element.
-</audio> */}
+
         </div>,
         document.getElementById('root-portal')
     )

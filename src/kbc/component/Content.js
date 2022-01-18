@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react'
-import data from './data';
 import './Content.css';
 import Message from './Message';
 import question from '../assets/music/question.mp3'
 import optionlock from '../assets/music/optionlock.mp3';
-const Content = () => {
+
+const Content = ({ data }) => {
     const [selectedOpt, setSelectedOpt] = useState('');
     const [amount, setAmount] = useState(10000);
     const [selectedOptNo, setSelectedOptNo] = useState(0);
@@ -14,6 +14,8 @@ const Content = () => {
     const [showMessage, setShowMessage] = useState(false);
     const [disable, setDisable] = useState(false);
     const [rightAnsClass, setRightAnsClass] = useState('');
+
+
 
     useEffect(() => {
         const question = document.getElementById('question');
@@ -48,15 +50,14 @@ const Content = () => {
 
 
             if (selected == correct) {
-                console.log("correct answer you won ____amount");
+
                 setSelectedOptColor('green')
                 setRightAnsClass((prev) => 'special1');
                 setAmount(amount * 2);
 
             }
             else {
-                console.log("You selected wrong answer....");
-                console.log("thankyou");
+
                 setSelectedOptColor('red');
 
             }
@@ -66,7 +67,7 @@ const Content = () => {
         const timerid2 = setTimeout(() => {
             setShowMessage(true);
             setSelectedOptNo(0);
-            setSelectedOptColor(null);
+            setSelectedOptColor("none");
 
         }, 7000)
 
@@ -77,24 +78,26 @@ const Content = () => {
         question.play();
         setQueNo(queNo + 1);
         setDisable(false);
+        setCorrectOpt('')
+
     }
     return (<div className='content'>
-        <h3 className='que'> {data[queNo].que}</h3>
+        <h3 className='que'> {data[queNo].question}</h3>
         <div className='answers'>
             <div className='answer'><button className={data[queNo].opt1 == correctOpt ? rightAnsClass : ""} style={selectedOptNo == 1 ? { border: `1px solid ${selectedOptcolor}`, background: selectedOptcolor } : {} && data[queNo].opt1 == correctOpt ? { background: "green" } : {}} onClick={() => checkAnswer(data[queNo].opt1, data[queNo].correct, 1)} disabled={disable}>{data[queNo].opt1}</button></div>
             <div className='answer'><button className={data[queNo].opt2 == correctOpt ? rightAnsClass : ""} style={selectedOptNo == 2 ? { border: `1px solid ${selectedOptcolor}`, background: selectedOptcolor } : {} && data[queNo].opt2 == correctOpt ? { background: "green" } : {}} onClick={() => checkAnswer(data[queNo].opt2, data[queNo].correct, 2)} disabled={disable}>{data[queNo].opt2}</button></div>
             <div className='answer'><button className={data[queNo].opt3 == correctOpt ? rightAnsClass : ""} style={selectedOptNo == 3 ? { border: `1px solid ${selectedOptcolor}`, background: selectedOptcolor } : {} && data[queNo].opt3 == correctOpt ? { background: "green" } : {}} onClick={() => checkAnswer(data[queNo].opt3, data[queNo].correct, 3)} disabled={disable}>{data[queNo].opt3}</button></div>
             <div className='answer'><button className={data[queNo].opt4 == correctOpt ? rightAnsClass : ""} style={selectedOptNo == 4 ? { border: `1px solid ${selectedOptcolor}`, background: selectedOptcolor } : {} && data[queNo].opt4 == correctOpt ? { background: "green" } : {}} onClick={() => checkAnswer(data[queNo].opt4, data[queNo].correct, 4)} disabled={disable}>{data[queNo].opt4}</button></div>
         </div>
-        <audio style={{ display: "none" }} controls id="question" autoplay>
+        <audio style={{ display: "none" }} controls id="question" >
             <source src={question} type="audio/mpeg" />
             Your browser does not support the audio element.
         </audio>
-        <audio style={{ display: "none" }} controls id="optionlocked" autoplay>
+        <audio style={{ display: "none" }} controls id="optionlocked" >
             <source src={optionlock} type="audio/mpeg" />
             Your browser does not support the audio element.
         </audio>
-        {showMessage && <Message isWon={selectedOpt == correctOpt} amount={amount} close={close} restart={restart} />}
+        {showMessage && <Message isWon={selectedOpt == correctOpt} amount={amount} close={close} restart={restart} length={data.length} queNo={queNo + 1} />}
     </div>
     )
 }
